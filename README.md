@@ -20,7 +20,8 @@ However, people ended up gravitating more to certain tasks, for instance myself 
 ## My Main Roles Within The Team
 One of my main roles within the team was managing the github. This involved the initial setup, giving everyone contribution rights to the repository, making sure everyone's local repositories were set up correctly on their computers, and ensuring that everyone understood the right process for creating branches and merging into each other's work.  There were a few problems getting everyones machines to work with the github repository, however, we did eventually get a system where everyone could contribute. The main problems seem to be with getting Git LFS to work correctly on some machines.
 
-The other main role that I had was in programming the swing mechanics, aiming mechanics and the button interaction mechanics. I spent a majority of my time experimenting with various methods to make sure that these gameplay mechanics were both fun and satisfying to use. I have gone into greater detail with this in my programming report that can be seen here. [INSERT LINK TO PROGRAMMING]
+The other main role that I had was in programming the swing mechanics, aiming mechanics and the button interaction mechanics. I spent a majority of my time experimenting with various methods to make sure that these gameplay mechanics were both fun and satisfying to use. I have gone into greater detail with this in my programming report that can be read [here](https://github.com/MickyJimbo/game-report/blob/master/programming.md).
+
 I was involved with small amounts of modelling and texturing, the main being the button for the button mechanics, but I was also involved in setting up some simple dynamic instance materials as place holders for the game. Towards the end I was also largely involved with the lighting of the final MVP level which helped a lot with giving it it's final look.
 
 ## Designing The MVP Level
