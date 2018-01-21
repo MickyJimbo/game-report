@@ -1,4 +1,4 @@
-# Game Programming Project 
+# Programming Project Fat Spiderman
 
 ## Setting Up The Github Repository
 Github only allows files of up to 20 megabytes, and whilst for the most part we wouldn’t be dealing with files bigger than this it was very important that we did not limit ourselves from such an early stage. Fortunately github provides a system for working with larger files called Git LFS.
