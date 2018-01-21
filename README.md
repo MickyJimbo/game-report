@@ -1,4 +1,4 @@
-# Game Project Overview
+# Project Fat Spiderman
 ## Initial Idea of the project
 After our first meeting we came up with a game design that we felt would both be challenging and interesting to make. The goal was to create a game with a character who could grapple and swing with the ability to change their own weight. Changing the characters weight would be the main way to interact with the puzzle elements of the game.
 
