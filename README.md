@@ -66,6 +66,12 @@ In the fifth and final corridor we use all of the elements together. The charact
 
 ## Modelling And Texturing
 
+#### WireFrame 1
+![Wireframe1](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonWire1.png)
+
+#### Wireframe 2
+![Wireframe2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonWire2.png)
+
 #### Colour
 ![ButtonColour](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonColour.png)
 
@@ -80,6 +86,9 @@ In the fifth and final corridor we use all of the elements together. The charact
 
 #### Substance Painter final material
 ![ButtonView2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button2.png)
+
+#### In game
+![InGame](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonIngame.png)
 
 ## Lighting
 ## Conclusion 
