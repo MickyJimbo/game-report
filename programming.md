@@ -5,6 +5,7 @@ Github only allows files of up to 20 megabytes, and whilst for the most part we 
 
 There were several ways we could setup the github project, and whilst none of them are particularly complicated by far the simplest way to set up a Git controlled UE4 project is by using the inbuilt tools within the engine. [IMAGE] From here UE4 will setup a local git repository on your computer for the game project. This tool is particularly useful as it allows you to set up the .gitignore file automatically, and providing you have Git LFS installed on your machine you can also automatically generate a .gitattributes file. Github only allows files of up to 20 megabytes, and whilst for the most part we wouldn’t be dealing with files bigger than this it was very important that we did not limit ourselves from such an early stage. So using Git LFS was a necessity.
 
+#### Unreal Engines source control tools
 ![UE4SourceControl](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/sourceControlUE4.png)
 
 The trouble with Git LFS is that Github provides only a small amount of data with a free account. About 1GB of data and 1GB of storage. Our project, due to the inclusion starter content, started at the size of 750MB. So almost immediately we had used 75% of our storage and after the first download of the project files 75% of our data. For this reason we decided to pay a small fee and increase the limit to 50GB of data and 50GB of storage. Upon reading the terms of the data allowance I noticed that if the project is public anyone downloading the files would use the data allowance from of my account, this meant that the project had to be set to private to prevent others from downloading the project.
@@ -15,19 +16,21 @@ As a team we decided the best way to organise additions to the game would be to 
 ## Blueprints
 I was responsible for three parts of the game; the swinging mechanics, the aiming system, and a button system to allow interaction with certain puzzles in the game.
 
-### Swing Mechanics
+### 1) Swing Mechanics
 Whilst thinking about how I would be able to achieve swinging in game it became obvious that I would want to take advantage of Unreal Engine physics system. After some searching online I discovered I could use a physics constraint.
 
 Before starting any blueprint work I decided to set up a simple system using a single physics constraint to test the ability to swing. This required only two static meshes and the physics constraint. I then decided to use the set location function on the character every tick to attach the player character to the swinging end of the physics constraint. This created some nice results, so I decided to take it to the next step and make it more dynamic.
 
 In order to make it more dynamic I needed the ability to select an object, generate a physics object, and then set the character location to the tail end of the physics constraint. This was best achieved using a raycast from the player character camera. Once the raycast hit an object I could then attach the head of the physics constraint to the object at the location of the raycast hit. The other end of the physics constraint could then be set to the location of the character. Then again on every tick setting the characters location to the tail end of the physics constraint would produce the dynamic swinging mechanic that I was looking for. 
 
+#### Spawning static meshes and linking them to the physics constraint
 ![SpawnStaticMeshes](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/staticMeshesForConstraint.png)
 
 ![LinkPhysics](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/staticmeshPhysicConstraintLinking.png)
 
 There were, however, still some problems. If the character was running at the point of the physics constraint creation the velocity of the character would not carry on over into the swing mechanic. This was relatively easy to fix as at the point of creation I could get the characters velocity and applied onto the tail end of the physics constraint. 
 
+#### Setting the initial velocity of the swing
 ![SwingInitVelocity](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/initialSwingVelocity.png)
 
 This revealed another problem, the physics constraint acted more like a rigid pole than a rope and if the character was moving towards the head of the physics constraint It would still lose its velocity.
@@ -36,24 +39,26 @@ In an attempt to combat this I came up with a system of dynamic physics constrai
 
 So now that I knew I was only able to use a single physics constraint to get the predictive results that I wanted I was going to have to get a bit more creative with the character movement. What I ended up doing was comparing the velocity of the character to the dot product of the vector between the head of the physics constraint and the character this effectively give me a value telling me whether the character was moving towards the head of the physics constraint or not.
 
+#### Checking to see if the characters velocity is perpendicular to the head of the physics constraint
 ![Perpendicular](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/velocityPerpendicularity.png)
 
 So depending on whether the character was moving towards the head of the physics constraint I could deactivate the swinging mechanics, then once the character was moving away I could reactivate the swinging mechanics. The results of this were fairly clean and felt nice to play with. However, there was still one more problem.
 
 When the player decided to deactivate the swing mechanics you would be shot immediately into the ground. After a lot of digging around I discovered the reason for this was because using the set location function does not reset the velocity the character movement component uses. So all the time the character was airborne the character movement component would be adding to the Z velocity and when you were no longer resetting the location of the character the component assumed that the character had been falling the entire time and would shoot you into the ground. I was unable to find a way to reset this internal value so in the end I decided to remove the set location function and replace it with the launch player function which played better with the character movement component. Using the launch player function meant that instead of setting a location I had to match the velocity of the tail end of the physics constraint and the character.
 
+#### Vector maths to match the velocity of the character to the tail end of the rope
 ![VelocityMatching](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/velocityMatching.png)
 
 I also had to add a small amount of bias depending on how far away the character was from the tail end of the physics constraint, basically I would add more to the velocity of the character as the character drifted further from the tail end of the physics constraint. Another benefit of using the launch player function was that it had the unintended effect of making the swinging feel smoother.
 
-This is what the final blueprint looked like:
-
+#### The point the rope is spawned
 ![SpawnRope](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/grappleAttachOnClick.png)
 
+#### Final rope blueprint
 ![GrappleLogic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/grappleAndSwingLogic.png)
 
 
-### Aiming Mechanics
+### 2) Aiming Mechanics
 Once the swing mechanics were finalised it became quickly apparent that a simple raycast was not going to be sufficient for the type of gameplay we were aiming for. A swingable object that was further away would be much harder to aim at than a swingable object that was closer. As this game was intended to be more of a puzzle game than testing the players coordination a new system would have to be devised.
 
 I decided to go with a cone scan. This puts an invisible cone in front of the character camera that checks for object collisions. I would then put the swingable objects that collide with the cone into an array. This left me with a set of potential aimable objects but in order to determine the the most suitable object to aim at it would require some additional processing.
@@ -73,7 +78,7 @@ Lastly, the aiming system was plugged in to work for both swingable objects and 
 
 ![AimSelection](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/selectingTheAimedActors.png)
 
-### Button System
+### 3) Button System
 The last mechanic I was responsible for was the button system. As this was going to need to interact with many other blueprints in the scene I designed it to be as simple as possible to use. In order for another blueprint to interact with the button all it would have to include was the button interface and then contain events for the activate and deactivate interface message calls. Any other functionality would be handled by the button itself.
  
 There are four set requirements for the button which were as follows:
