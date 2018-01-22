@@ -66,16 +66,20 @@ I decided to go with a cone scan. This puts an invisible cone in front of the ch
 In my first iteration of this processing I would fetch the dot products between each objects vector to the camera and the camera’s forward vector and the value closest to 1 would be chosen as the aimed object. However, this still meant that objects further away were harder to aim at, so in order to solve this I added a bias to objects further away making them just as easy to aim at as closer objects.
 In the next iteration of the processing I discovered a much simpler and more accurate way of determining what the player was aiming at. Instead of a dot product check I realised I could use a screen based solution. I could convert an object’s location to a screen location and then simply check the distance between the cursor and the screen location of the object. The object with the shortest distance would then be selected as the aimed object.
 
+#### Converting screen space to world space helper function
 ![ScreenspaceWorldspace](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/screenspaceToWorldspace.png)
 
+#### Using the helper function and output of the aimed object
 ![MoreScreenspaceWorldspace](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/screenspaceDistanceAndOutput.png)
 
 Another thing that needed to be solved was that objects could be aimed at through walls. This was due to the cone scan as it would not be able to detect if an object is being obscured. To fix this I fired a raycast from the camera to the centre of each object detected by the cone scan, if the first hit of the raycast was not the object that it was trying to hit then the object would not be selected as the aimed object.
 
+#### Using a raycast to detect if an object is being obscured
 ![Obscured](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/objectObscured.png)
 
 Lastly, the aiming system was plugged in to work for both swingable objects and food sources. Highlight message calls were then sent to the aimed objects using a blueprint interface so the objects being aimed at could choose how they would inform the player of this.
 
+#### Logic to manage highlighting and unhighlighting of aimed object
 ![AimSelection](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/selectingTheAimedActors.png)
 
 ### 3) Button System
