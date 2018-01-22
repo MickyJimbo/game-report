@@ -35,6 +35,9 @@ I was involved with small amounts of modelling and texturing, the main being the
 #### WireFrame
 ![Wireframe](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonWire1.png)
 
+#### ID Map
+![IDMap](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/IDMap.png)
+
 #### Colour
 ![ButtonColour](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonColour.png)
 
