@@ -79,7 +79,6 @@ In the fifth and final corridor we use all of the elements together. The charact
 ![ButtonNormal](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonNormal.png)
 
 #### Substance Painter final material
-![ButtonView1](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button.png)
 ![ButtonView2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button2.png)
 
 ## Lighting
