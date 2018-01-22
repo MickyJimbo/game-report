@@ -30,6 +30,29 @@ The other main role that I had was in programming the swing mechanics, aiming me
 
 I was involved with small amounts of modelling and texturing, the main being the button for the button mechanics, but I was also involved in setting up some simple dynamic instance materials as place holders for the game. Towards the end I was also largely involved with the lighting of the final MVP level which helped a lot with giving it it's final look.
 
+## Modelling And Texturing
+
+#### WireFrame
+![Wireframe](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonWire1.png)
+
+#### Colour
+![ButtonColour](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonColour.png)
+
+#### Roughness
+![ButtonRoughness](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonRoughness.png)
+
+#### Metallic
+![ButtonMetallic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonMetallic.png)
+
+#### Normal
+![ButtonNormal](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonNormal.png)
+
+#### Substance Painter final material
+![ButtonView2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button2.png)
+
+#### In game
+![InGame](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonIngame.png)
+
 ## Designing The MVP Level
 
 #### Initial MVP level design
@@ -63,29 +86,6 @@ In the fourth corridor we're introducing a weight controlled timed button that c
 ![Corridor5](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/corridors/corridor5.png)
 
 In the fifth and final corridor we use all of the elements together. The character must be heavy in order to push the button that activates the timed door at the back of the room. The player must then shed weight to use the fan that launches them up high enough to reach the swing point. Finally the player must use a food source to regain weight to be able to break through the destructible wall on the other side of the door. The player must do this in a timely fashion otherwise the laser grid will reactivate and they will need to restart.
-
-## Modelling And Texturing
-
-#### WireFrame
-![Wireframe](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonWire1.png)
-
-#### Colour
-![ButtonColour](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonColour.png)
-
-#### Roughness
-![ButtonRoughness](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonRoughness.png)
-
-#### Metallic
-![ButtonMetallic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonMetallic.png)
-
-#### Normal
-![ButtonNormal](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonNormal.png)
-
-#### Substance Painter final material
-![ButtonView2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button2.png)
-
-#### In game
-![InGame](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonIngame.png)
 
 ## Lighting
 ## Conclusion 
