@@ -44,9 +44,11 @@ When the player decided to deactivate the swing mechanics you would be shot imme
 
 I also had to add a small amount of bias depending on how far away the character was from the tail end of the physics constraint, basically I would add more to the velocity of the character as the character drifted further from the tail end of the physics constraint. Another benefit of using the launch player function was that it had the unintended effect of making the swinging feel smoother.
 
+This is what the final blueprint looked like:
+
 ![SpawnRope](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/grappleAttachOnClick.png)
+
 ![GrappleLogic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/grappleAndSwingLogic.png)
-![SwingCheck](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/checkIfCharacterSwinging.png)
 
 
 ### Aiming Mechanics
