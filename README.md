@@ -13,6 +13,7 @@ To make sure we were all on the same page we had several ways of arranging ourse
 
 As we all had to take part in both programming and art for the project we initially decided that it would be a good idea to split up the tasks for various puzzle elements. A lot of ideas did not make it into the final game but here is a list of just a few that we discussed during our meetings:
 - Platforms that would raise and lower based on your weight
+- Breakable platforms
 - Fans that would push you based on your weight
 - Suction tubes that would only work if you are the correct weight
 - Walls that would break when hit but only if you are heavy
@@ -30,6 +31,10 @@ The other main role that I had was in programming the swing mechanics, aiming me
 I was involved with small amounts of modelling and texturing, the main being the button for the button mechanics, but I was also involved in setting up some simple dynamic instance materials as place holders for the game. Towards the end I was also largely involved with the lighting of the final MVP level which helped a lot with giving it it's final look.
 
 ## Designing The MVP Level
+
+#### Initial MVP level design
+![InitialDesign](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/initialDesign.png)
+
 We designed the MVP level during one of our team meetings, we gave ourselves a set of easily achievable puzzle elements that we could use within the game and then discussed how they could be used to make a compelling first level for our game.
 The main goal for the MVP was to be able to give this game to someone who's never seen it before and have them be able to figure out how to progress through the level. By the time they came to the next level they would already know how to use every element in the game.
 The MVP level consists of essentially five corridors. Each of the first four corridors introduce new gameplay elements as well as increasing difficulty. By the fifth corridor all of the gameplay elements have been introduced and the player will have to come up with creative use of these elements in order to complete the level.
@@ -45,5 +50,13 @@ In the fourth corridor we're introducing a weight controlled timed button that c
 In the fifth and final corridor we use all of the elements together. The character must be heavy in order to push the button that activates the timed door at the back of the room. The player must then shed weight to use the fan that launches them up high enough to reach the swing point. Finally the player must use a food source to regain weight to be able to break through the destructible wall on the other side of the door. The player must do this in a timely fashion otherwise the laser grid will reactivate and they will need to restart.
 
 ## Modelling And Texturing
+
+![ButtonColour](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonColour.png)
+![ButtonRoughness](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonRoughness.png)
+![ButtonMetallic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonMetallic.png)
+![ButtonNormal](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonNormal.png)
+![ButtonView1](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button.png)
+![ButtonView2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button2.png)
+
 ## Lighting
 ## Conclusion 
