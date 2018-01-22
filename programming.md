@@ -20,21 +20,32 @@ Before starting any blueprint work I decided to set up a simple system using a s
 
 In order to make it more dynamic I needed the ability to select an object, generate a physics object, and then set the character location to the tail end of the physics constraint. This was best achieved using a raycast from the player character camera. Once the raycast hit an object I could then attach the head of the physics constraint to the object at the location of the raycast hit. The other end of the physics constraint could then be set to the location of the character. Then again on every tick setting the characters location to the tail end of the physics constraint would produce the dynamic swinging mechanic that I was looking for. 
 
-There were, however, still some problems. If the character was running at the point of the physics constraint creation the velocity of the character would not carry on over into the swing mechanic. This was relatively easy to fix as at the point of creation I could get the characters velocity and applied onto the tail end of the physics constraint. This revealed another problem, the physics constraint acted more like a rigid pole than a rope and if the character was moving towards the head of the physics constraint It would still lose its velocity.
+![SpawnStaticMeshes](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/staticMeshesForConstraint.png)
+
+![LinkPhysics](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/staticmeshPhysicConstraintLinking.png)
+
+There were, however, still some problems. If the character was running at the point of the physics constraint creation the velocity of the character would not carry on over into the swing mechanic. This was relatively easy to fix as at the point of creation I could get the characters velocity and applied onto the tail end of the physics constraint. 
+
+![SwingInitVelocity](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/initialSwingVelocity.png)
+
+This revealed another problem, the physics constraint acted more like a rigid pole than a rope and if the character was moving towards the head of the physics constraint It would still lose its velocity.
 
 In an attempt to combat this I came up with a system of dynamic physics constraints connected as a chain. The hope was that by effectively simulating a chain it would act more like a rope than a rigid pole. Unfortunately increasing the number of chain links only resulted in the swing mechanics becoming more unpredictable and ultimately I had to abandon this method.
 
-So now that I knew I was only able to use a single physics constraint to get the predictive results that I wanted I was going to have to get a bit more creative with the character movement. What I ended up doing was comparing the velocity of the character to the dot product of the vector between the head of the physics constraint and the character this effectively give me a value telling me whether the character was moving towards the head of the physics constraint or not. So depending on whether the character was moving towards the head of the physics constraint I could deactivate the swinging mechanics, then once the character was moving away I could reactivate the swinging mechanics. The results of this were fairly clean and felt nice to play with. However, there was still one more problem.
+So now that I knew I was only able to use a single physics constraint to get the predictive results that I wanted I was going to have to get a bit more creative with the character movement. What I ended up doing was comparing the velocity of the character to the dot product of the vector between the head of the physics constraint and the character this effectively give me a value telling me whether the character was moving towards the head of the physics constraint or not.
 
-When you decided to deactivate the swing mechanics you would be shot immediately into the ground. After a lot of digging around I discovered the reason for this was because using the set location function does not reset the velocity the character movement component uses. So all the time the character was airborne the character movement component would be adding to the Z velocity and when you were no longer resetting the location of the character the component assumed that the character had been falling the entire time and would shoot you into the ground. I was unable to find a way to reset this internal value so in the end I decided to remove the set location function and replace it with the launch player function which played better with the character movement component. Using the launch player function meant that instead of setting a location I had to match the velocity of the tail end of the physics constraint and the character. I also had to add a small amount of bias depending on how far away the character was from the tail end of the physics constraint, basically I would add more to the velocity of the character as the character drifted further from the tail end of the physics constraint. Another benefit of using the launch player function was that it had the unintended effect of making the swinging feel smoother.
+![Perpendicular](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/velocityPerpendicularity.png)
+
+So depending on whether the character was moving towards the head of the physics constraint I could deactivate the swinging mechanics, then once the character was moving away I could reactivate the swinging mechanics. The results of this were fairly clean and felt nice to play with. However, there was still one more problem.
+
+When the player decided to deactivate the swing mechanics you would be shot immediately into the ground. After a lot of digging around I discovered the reason for this was because using the set location function does not reset the velocity the character movement component uses. So all the time the character was airborne the character movement component would be adding to the Z velocity and when you were no longer resetting the location of the character the component assumed that the character had been falling the entire time and would shoot you into the ground. I was unable to find a way to reset this internal value so in the end I decided to remove the set location function and replace it with the launch player function which played better with the character movement component. Using the launch player function meant that instead of setting a location I had to match the velocity of the tail end of the physics constraint and the character.
+
+![VelocityMatching](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/velocityMatching.png)
+
+I also had to add a small amount of bias depending on how far away the character was from the tail end of the physics constraint, basically I would add more to the velocity of the character as the character drifted further from the tail end of the physics constraint. Another benefit of using the launch player function was that it had the unintended effect of making the swinging feel smoother.
 
 ![SpawnRope](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/grappleAttachOnClick.png)
 ![GrappleLogic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/grappleAndSwingLogic.png)
-![SwingInitVelocity](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/initialSwingVelocity.png)
-![SpawnStaticMeshes](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/staticMeshesForConstraint.png)
-![LinkPhysics](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/staticmeshPhysicConstraintLinking.png)
-![VelocityMatching](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/velocityMatching.png)
-![Perpendicular](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/velocityPerpendicularity.png)
 ![SwingCheck](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/checkIfCharacterSwinging.png)
 
 
