@@ -79,7 +79,7 @@ Another thing that needed to be solved was that objects could be aimed at throug
 
 Lastly, the aiming system was plugged in to work for both swingable objects and food sources. Highlight message calls were then sent to the aimed objects using a blueprint interface so the objects being aimed at could choose how they would inform the player of this.
 
-#### Logic to manage highlighting and unhighlighting of aimed object
+#### Logic to manage highlighting and unhighlighting of aimed objects
 ![AimSelection](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/selectingTheAimedActors.png)
 
 ### 3) Button System
@@ -97,7 +97,22 @@ There are also four types of buttons contained within one blueprint:
 - A toggle button that will activate the first time it is stepped on and will deactivate the second time it is stepped on.
 - A single use button that once activated cannot be deactivated.
 
+#### Button options
+![ButtonOptions](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/buttonOptions.png)
+
 When the idea of the button came up, we were not entirely sure how many different blueprints in the scene would use it so building it to be flexible was very useful. In the end we only used the timed button, but having the options available was very handy when designing the MVP level.
+
+#### Button initialisation
+![Init](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/buttonInit.png)
+
+#### Button type activation logoc
+![ActivationLogic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/buttonTypeLogic.png)
+
+#### Event to handle light activation and button depression animation
+![LightAndDepress](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/communicationEvents.png)
+
+#### Final button blueprint
+![Final](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/buttonLogic.png)
 
 ## The Trouble With Git And Unreal Engine Blueprints
 Throughout the project we have had several moments where using Git has been a problem. The biggest being the lack of ability to merge and commit changes properly, there were quite a few moments when we needed to be working on the same blueprints but couldn’t because it would have potentially overwritten someone else's work. As blueprints are saved in a binary format Git is unable to detect small changes between the files, and any small changes result in the entire file being overwritten in a commit. This meant that in order to work on the same files some of us would need to manually merge our work later by hand.
