@@ -53,6 +53,9 @@ I was involved with small amounts of modelling and texturing, the main being the
 #### Substance Painter final material
 ![ButtonView2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button2.png)
 
+#### Material
+![Material](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/DynMaterial.png)
+
 #### In game
 ![InGame](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonIngame.png)
 
