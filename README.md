@@ -156,8 +156,12 @@ Unreal has made an attempt to provide a merge and difference tool for version ma
 
 ## Modelling And Texturing
 
+The button was modeled and UV unwraped in blender.
+
 #### WireFrame
 ![Wireframe](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonWire1.png)
+
+I baked out an ID map within blender so I could easily mask out the different materials in Substance Painter. 
 
 #### ID Map
 ![IDMap](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/IDMap.png)
@@ -179,6 +183,8 @@ Unreal has made an attempt to provide a merge and difference tool for version ma
 
 #### Material
 ![Material](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/DynMaterial.png)
+
+This was used as a dynamic instance material so the light could be turned on and off programmatically. The Light Emission parameter is used to multiply the colour of the emissive texture.
 
 #### In game
 ![InGame](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonIngame.png)
