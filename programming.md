@@ -105,7 +105,7 @@ When the idea of the button came up, we were not entirely sure how many differen
 #### Button initialisation
 ![Init](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/buttonInit.png)
 
-#### Button type activation logic
+#### Button activation logic on state changes
 ![ActivationLogic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/buttonTypeLogic.png)
 
 #### Event to handle light activation and button depression animation
