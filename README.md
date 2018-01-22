@@ -39,22 +39,46 @@ We designed the MVP level during one of our team meetings, we gave ourselves a s
 The main goal for the MVP was to be able to give this game to someone who's never seen it before and have them be able to figure out how to progress through the level. By the time they came to the next level they would already know how to use every element in the game.
 The MVP level consists of essentially five corridors. Each of the first four corridors introduce new gameplay elements as well as increasing difficulty. By the fifth corridor all of the gameplay elements have been introduced and the player will have to come up with creative use of these elements in order to complete the level.
 
+#### Corridor 1
+![Corridor1](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/corridors/corridor1.png)
+
 In the first corridor we introduce three gameplay elements, the first being the characters ability to swing, the second, that the fans will push your character, and the third, that you can change your character’s weight to reduce the effects of the fan. In between the first and second corridor we're also teaching the player that they need to reduce their weight in order to make longer jumps.
+
+#### Corridor 2
+![Corridor2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/corridors/corridor2.png)
 
 In the second corridor we're teaching the player they need to be heavy in order to break the destructible wall. The player will also learn to chain swings together. Lastly, the player will also learn that they can change their weight during their swing.
 
+#### Corridor 3
+![Corridor3](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/corridors/corridor3.png)
+
 In the third corridor we're reuse the fans to show that they can also be useful. By positioning the fans differently the fans can be used as launch pads, however the player must be the correct weight for it to have the best effect. Being too heavy has no effect and being too light has too much effect, it requires the player to take better control of their character’s weight.
 
+#### Corridor 4
+![Corridor4](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/corridors/corridor4.png)
+
 In the fourth corridor we're introducing a weight controlled timed button that controls a laser grid on the other side of the corridor. If the player takes too long the laser grid will reactivate and potentially kill the player.
+
+#### Corridor 5
+![Corridor5](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/corridors/corridor5.png)
 
 In the fifth and final corridor we use all of the elements together. The character must be heavy in order to push the button that activates the timed door at the back of the room. The player must then shed weight to use the fan that launches them up high enough to reach the swing point. Finally the player must use a food source to regain weight to be able to break through the destructible wall on the other side of the door. The player must do this in a timely fashion otherwise the laser grid will reactivate and they will need to restart.
 
 ## Modelling And Texturing
 
+#### Colour
 ![ButtonColour](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonColour.png)
+
+#### Roughness
 ![ButtonRoughness](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonRoughness.png)
+
+#### Metallic
 ![ButtonMetallic](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonMetallic.png)
+
+#### Normal
 ![ButtonNormal](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/ButtonNormal.png)
+
+#### Substance Painter final material
 ![ButtonView1](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button.png)
 ![ButtonView2](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/button/Button2.png)
 
