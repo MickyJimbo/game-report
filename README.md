@@ -225,8 +225,12 @@ In the fifth and final corridor we use all of the elements together. The charact
 
 ## Lighting
 
+Spotlights were used to highlight the important parts of the level such as the platforms, fans and food sources.
+
 #### Spotlights
 ![Spotlights](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/SpotLights.png)
+
+I used a volumetric height fog to give the scene a better sense of distance.
 
 #### Exponential Height Fog
 ![EHF](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/EHF.png)
@@ -234,8 +238,12 @@ In the fifth and final corridor we use all of the elements together. The charact
 #### No Exponential Height Fog
 ![NoEHF](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/NoEHF.png)
 
+As we had quite a few bright emissive materials it would occasionally change the exposure of the character, this would cause the room to appear much darker than intended. To get around this I fixed the exposure to a specific value.
+
 #### Auto Exposure
 ![AutoExposure](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/AutoExposure.png)
+
+In the post processing effect I activated screen space ambient occlusion and global illumination. Both of these methods added a level of realism to the scene and made it seem less flat.
 
 #### Ambient Occlusion and Global Illumination
 ![AOGI](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/AOGI.png)
