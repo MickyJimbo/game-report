@@ -224,4 +224,20 @@ In the fourth corridor we're introducing a weight controlled timed button that c
 In the fifth and final corridor we use all of the elements together. The character must be heavy in order to push the button that activates the timed door at the back of the room. The player must then shed weight to use the fan that launches them up high enough to reach the swing point. Finally the player must use a food source to regain weight to be able to break through the destructible wall on the other side of the door. The player must do this in a timely fashion otherwise the laser grid will reactivate and they will need to restart.
 
 ## Lighting
+
+#### Spotlights
+![Spotlights](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/SpotLights.png)
+
+#### Exponential Height Fog
+![EHF](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/EHF.png)
+
+#### No Exponential Height Fog
+![NoEHF](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/NoEHF.png)
+
+#### Auto Exposure
+![AutoExposure](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/AutoExposure.png)
+
+#### Ambient Occlusion and Global Illumination
+![AOGI](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/AOGI.png)
+
 ## Conclusion 
