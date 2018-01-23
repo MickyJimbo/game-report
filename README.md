@@ -248,4 +248,15 @@ In the post processing effect I activated screen space ambient occlusion and glo
 #### Ambient Occlusion and Global Illumination
 ![AOGI](https://github.com/MickyJimbo/game-report/blob/master/Screenshots/Lighting/AOGI.png)
 
-## Conclusion 
+## Conclusion
+
+I believe we worked rather well as team, the weekly meetings and online communication helped greatly to letting everyone know what others in the group were responsible for and what they were working on. I think however in future projects it would be much better for people to focus on what they feel most comfortable with. As everyone had to take part in both programming and art, this left some features taking much longer than they should have to be implemented into the game. 
+
+If we had more time I think we could have looked into communicating the characters state better to the player. We had originally planned on implementing a pair of arms for the player to see. These arms would have had shape keys that would display the characters weight. In the end we had to settle for a simple UI element to communicate this.
+
+Personally I would have liked to spend more time working on the modeling and texturing. As I was involved in creating some pretty key gameplay mechanics these ended up taking most of my time.
+
+While I feel in some aspects we fell short of the mark of the ideas we had discussed in out team meetings I believe we produced a good set of tools that could be used to take the game further. I hope that I can come back to this game in the future and experiment with it more as I think the original concept of the game was quite interesting.
+
+
+
